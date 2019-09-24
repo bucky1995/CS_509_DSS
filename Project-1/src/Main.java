@@ -7,6 +7,8 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,9 +22,13 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String filePath = "cache/cache.txt";
+        File f = new File(filePath);
+        f.delete();
+        f.createNewFile();
         initialScreenGUI init = new initialScreenGUI();
-        //card c = new card(2,1);
+
     }
 
 

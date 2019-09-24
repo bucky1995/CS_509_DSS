@@ -6,6 +6,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 
 public class initialScreenGUI extends JFrame{
@@ -14,7 +16,7 @@ public class initialScreenGUI extends JFrame{
     private JPanel Mainview;
     private JButton quitButton;
 
-    public initialScreenGUI(){
+    public initialScreenGUI() {
         //super("123");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();

@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import PostCard.model.*;
+import org.json.JSONException;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -52,7 +53,6 @@ public class newCardGUI extends JFrame{
                 dispose();
             }
         });
-
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -66,6 +66,15 @@ public class newCardGUI extends JFrame{
                     try {
                         c.save();
                     } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }   catch (JSONException jx){
+                        jx.printStackTrace();
+                    }
+                    try {
+                        c.addVE(3,"Xinbo's Project1");
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    } catch (JSONException ex) {
                         ex.printStackTrace();
                     }
                     //todo create edit screen
