@@ -71,7 +71,7 @@ public class newCardGUI extends JFrame{
                         jx.printStackTrace();
                     }
                     try {
-                        c.addVE(3,"Xinbo's Project1");
+                        c.addVE(3,"Xinbo's Project1-Comic Sans MS-1-1-1-1");
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     } catch (JSONException ex) {

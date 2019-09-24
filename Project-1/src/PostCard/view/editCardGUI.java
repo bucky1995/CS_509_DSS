@@ -70,7 +70,7 @@ public class editCardGUI extends JFrame {
         for(int i=0;i<picList.length;i++){
             pic_list.addItem(picList[i]);
         }
-        for(int i=0;i<3;i++){
+        for(int i=0;i<=3;i++){
             updatePage(i);
         }
         setVisible(true);
@@ -207,10 +207,6 @@ public class editCardGUI extends JFrame {
     }
 
     private void updatePage(int page){
-        if(page == 3){
-            JOptionPane.showMessageDialog(null, "back page cannot be edited", "Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
         ArrayList<String> list = new ArrayList<String>();
         DefaultListModel tempList = new DefaultListModel();
         switch (page){
@@ -237,6 +233,14 @@ public class editCardGUI extends JFrame {
                     tempList.addElement(list.get(i));
                 }
                 rightList.setModel(tempList);
+                break;
+            }
+            case 3:{
+                list = c.back.getE();clearText();
+                for(int i=0;i<list.size();i++){
+                    tempList.addElement(list.get(i));
+                }
+                BackList.setModel(tempList);
                 break;
             }
             default:break;
